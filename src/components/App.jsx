@@ -1,10 +1,11 @@
 import React from 'react'
+import ListTournaments from './ListTournaments.jsx'
 
 // import VisibleTodoList from './containers/VisibleTodoList'
 
 const App = () => (
   <div>
-    Mi primera app
+    <ListTournaments/>
 
   </div>
 )
