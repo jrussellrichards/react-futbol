@@ -2,6 +2,7 @@ import React from 'react'
 import Tournament from './Tournament.jsx'
 import Carousel from './Carousel.jsx'
 import '../resources/styles/grid.css'
+require('typeface-roboto')
 
 
 const App = () => (

@@ -11,9 +11,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 // let store = createStore(todoApp)
 
 render(
-  // <Provider store={store}>
-    <App />,
-  // </Provider>,
-  document.getElementById('root')
+    // <Provider store={store}>
+    <
+    App / > ,
+    // </Provider>,
+    document.getElementById('root')
 )
-
