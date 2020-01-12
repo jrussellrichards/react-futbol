@@ -5,24 +5,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-    },
-}));
 
-const button = {
-    boxShadow: "none",
-    // m = "20"
-}
+
 export default function Header(props) {
     const classes = useStyles();
 
@@ -65,4 +52,22 @@ export default function Header(props) {
     )
 
 
+}
+
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        flexGrow: 1,
+    },
+}));
+
+const button = {
+    boxShadow: "none",
+    // m = "20"
 }

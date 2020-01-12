@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './state/reducers/index'
 import App from './components/app.jsx'
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "typeface-roboto";
 
@@ -13,9 +14,10 @@ import "typeface-roboto";
 // let store = createStore(todoApp)
 
 render(
-    // <Provider store={store}>
-    <
-    App / > ,
-    // </Provider>,
+    <BrowserRouter>
+
+    <App/> 
+    </BrowserRouter>
+    ,
     document.getElementById('root')
 )
