@@ -1,6 +1,9 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+var path = require('path');
 module.exports = {
+
+    // mode: 'development',
     module: {
         rules: [{
                 test: /\.(js|jsx)$/,
@@ -50,4 +53,5 @@ module.exports = {
         }),
         new MiniCSSExtractPlugin()
     ]
+
 };

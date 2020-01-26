@@ -9,7 +9,6 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 
-
 export default function Header(props) {
     const classes = useStyles();
 
@@ -20,28 +19,32 @@ export default function Header(props) {
             >
                 <Toolbar>
                     <Grid container className={classes.root} spacing={4}>
-                        
-                    <Grid item xs={2}>
-                    </Grid>
+
+                        <Grid item xs={2}>
+                        </Grid>
 
                         <Typography variant="h6" className={classes.title}
                         >
-                            <img src='C:\apps\react-futbol\src\resources\img\logo.png' />
+                            {/* <img 
+                            style = {icon}
+                            src='src/resources/img/logo.png' /> */}
 
-                            React Fútbol
-                            
-                        <Button
+                                               
+                            <Link
+                                to="./"
                                 style={button}
-                                variant="contained" color="primary">
+                            >
                                 ¿Por qué React Fútbol?
-                        </Button>
-                        <Button
+                        </Link>
+                     
+                            <Link
+                                to="./tournaments"
                                 style={button}
-                                variant="contained" color="primary">
+                            >
                                 Torneos
-                        </Button>
+                        </Link>
                         </Typography>
-                        </Grid>
+                    </Grid>
 
 
                     <Button color="inherit">Login</Button>
@@ -69,5 +72,12 @@ const useStyles = makeStyles(theme => ({
 
 const button = {
     boxShadow: "none",
-    // m = "20"
+    color: "white",
+    "text-decoration": "none",
+    "margin-left": "2em"
+}
+
+const icon = {
+    height: "4em",
+    width: "6em"
 }
