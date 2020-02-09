@@ -1,0 +1,26 @@
+ [
+   {
+   "title": "Copa humanidades",
+   "description": " El más distinguido campeonato de baby fútbol en la Universidad de Concepción, luego del campeonato organiado por informática.    Se enfrentarán los más distinguidos equipos de todas las carreras,   y para participar debes tener coraje y pasar por pruebas de selección.   ",
+   "date": "14 de Marzo, 2020",
+   "requierements": "Mínimo de 7 jugadores   máximo de 15.   Modalidad: 5 vs 5   Inscripción: $15 .000   Árbitro: $2 .500 cada partido "
+ },
+   {
+   "title": "Copa Intergaláctica",
+   "description": " No se admiten terrícolas",
+   "date": "14 de Abril, 2020",
+   "requierements": "Mínimo de 7 jugadores   máximo de 15.   Modalidad: 5 vs 5   Inscripción: $15 .000   Árbitro: $2 .500 cada partido "
+ },
+   {
+   "title": "Copa del terror",
+   "description": " No entres si tienes miedo",
+   "date": "14 de Octubre, 2020",
+   "requierements": "Mínimo de 11 jugadores   máximo de 21.   Modalidad: 5 vs 5   Inscripción: $15 .000   Árbitro: $2 .500 cada partido "
+ },
+   {
+   "title": "Copa sin final",
+   "description": "No nos importa quien gane",
+   "date": "14 de Diciembre, 2020",
+   "requierements": "Mínimo de 5 jugadores   máximo de 10.   Modalidad: 5 vs 5   Inscripción: $15 .000   Árbitro: $2 .500 cada partido "
+ }
+]
