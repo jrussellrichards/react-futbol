@@ -6,11 +6,12 @@ import '../resources/styles/grid.css'
 import Header from './Header.jsx'
 import Modal from './Modal.jsx'
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import '../resources/styles/grid.css'
 
 
 const App = () => (
   <div>
-    <Header />
+    {/* <Header /> */}
     <Switch>
       <Route
         exact path="/"
@@ -22,12 +23,17 @@ const App = () => (
       <Route
         path="/tournaments"
       >
-        <div>
-          <Tournaments />
+        <div className="principalWrapper">
+          <div> Header</div>
+          <div>
+            <div>
+              <Carousel />
+            </div>
+            <div className="tournamentsWrapper">
+              <Tournaments />
+            </div>
+          </div>
         </div>
-
-
-
 
       </Route>
     </Switch>
