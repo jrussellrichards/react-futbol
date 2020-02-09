@@ -5,6 +5,10 @@ module.exports = {
 
     // mode: 'development',
     module: {
+        // output: {
+        //     path: path.resolve(__dirname, 'dist'),
+        //     publicPath: '/'
+        //   },
         rules: [{
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -52,6 +56,9 @@ module.exports = {
             filename: "./index.html"
         }),
         new MiniCSSExtractPlugin()
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true,
+      }
 
 };

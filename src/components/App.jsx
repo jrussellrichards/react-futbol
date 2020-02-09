@@ -13,40 +13,22 @@ const App = () => (
     <Header />
     <Switch>
       <Route
-       exact path="/"
+        exact path="/"
       >
-        <Carousel
-          className="carousel"
-          name='Copa de campeones'
-          description=' Solo para los campeones de cada liga en su carrera'
-          contact_name='Joaquin Cardenas'
-          contact_number='+56951097841'
-          date_tournament='2020-03-15'
-          sport='Baby futbol'
-        />
+        <Carousel />
 
-        {/* <Tournament className="tournament"
-      name='Copa de campeones'
-      description=' Solo para los campeones de cada liga en su carrera'
-      contact_name='Joaquin Cardenas'
-      contact_number='+56951097841'
-      date_tournament='2020-03-15'
-      sport='Baby futbol'
-    /> */}
+
       </Route>
       <Route
-        path = "/tournaments"
+        path="/tournaments"
       >
-        {/* <Modal
-              name='Copa de campeones'
-              description=' Solo para los campeones de cada liga en su carrera'
-              contact_name='Joaquin Cardenas'
-              contact_number='+56951097841'
-              date_tournament='2020-03-15'
-              sport='Baby futbol' /> */}
-      <Tournaments/>
-        
-    
+        <div>
+          <Tournaments />
+        </div>
+
+
+
+
       </Route>
     </Switch>
   </div >
