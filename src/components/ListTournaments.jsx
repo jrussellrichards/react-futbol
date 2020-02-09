@@ -9,14 +9,15 @@ export default function ListTournaments(props) {
 
 
   return (
-    tournaments.map(
-      tournament =>
+    tournaments.map((
+      tournament,index )=>
         <Tournament
           title={tournament.title}
           description={tournament.description}
           requierements={tournament.requierements}
           date={tournament.date}
           img={tournament.img}
+          key = {index}
 
         />
 
