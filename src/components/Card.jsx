@@ -65,7 +65,7 @@ export default function Tournament(props) {
       />
       <CardMedia
         className={classes.media}
-        image="https://images.alphacoders.com/213/thumb-1920-213821.jpg"
+        image={props.img}
         title="Paella dish"
       />
       <CardContent>
