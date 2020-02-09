@@ -11,7 +11,6 @@ import '../resources/styles/grid.css'
 
 const App = () => (
   <div>
-    {/* <Header /> */}
     <Switch>
       <Route
         exact path="/"
@@ -24,7 +23,10 @@ const App = () => (
         path="/tournaments"
       >
         <div className="principalWrapper">
-          <div> Header</div>
+          <div className = "header"> 
+          <Header />
+
+          </div>
           <div>
             <div>
               <Carousel />

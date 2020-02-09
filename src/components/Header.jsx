@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import '../resources/styles/grid.css'
 
 
 
@@ -14,43 +15,81 @@ export default function Header(props) {
 
     return (
         <div className={classes.root}>
-            <AppBar
-                position="static"
-            >
-                <Toolbar>
-                    <Grid container className={classes.root} spacing={4}>
 
-                        <Grid item xs={2}>
-                        </Grid>
+            <div className="icon-sm-logo"></div> 
+            
+            <div className="navWrapper">
 
-                        <Typography variant="h6" className={classes.title}
-                        >
-                            {/* <img 
-                            style = {icon}
-                            src='src/resources/img/logo.png' /> */}
+                <i
+                    class="fas fa-home fa-2x"
+                    style = {{
+                        color: "white",
+                        "margin-left": "10px"}}
 
-                                               
-                            <Link
-                                to="./"
-                                style={button}
-                            >
-                                ¿Por qué React Fútbol?
+                    
+                    
+                ></i>
+                <Typography variant="h6" className={classes.title}
+                >
+
+                    <Link
+                        to="./"
+                        style={button}
+                    >
+                        Home
                         </Link>
-                     
-                            <Link
-                                to="./tournaments"
-                                style={button}
-                            >
-                                Torneos
+
+                </Typography>
+                <i
+                    class="fa fa-trophy fa-2x"
+                    style = {{
+                        color: "white",
+                        "margin-left": "10px"}}
+
+                    
+                    
+                ></i>
+                <Typography variant="h6" className={classes.title}
+                >
+
+                    <Link
+                        to="./Tournaments"
+                        style={button}
+                    >
+                        Browse Tournaments
                         </Link>
-                        </Typography>
-                    </Grid>
+
+                </Typography>
+                <i
+                    class="fas fa-futbol fa-2x"
+                    style = {{
+                        color: "white",
+                        "margin-left": "10px"}}
+
+                    
+                    
+                ></i>
+                <Typography variant="h6" className={classes.title}
+                >
+
+                    <Link
+                        to="./Organize"
+                        style={button}
+                    >
+                        Organize Tournaments
+                        </Link>
+
+                </Typography>
 
 
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
+            </div>
 
-            </AppBar>
+
+
+
+            <Button color="inherit">Login</Button>
+
+
         </div>
     )
 

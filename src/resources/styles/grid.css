@@ -15,6 +15,20 @@
         margin: auto;
         height: 2000px; */
     }
+    .navWrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 10% 90% ;
+        /* grid-template-rows: 50% 30%; */
+
+        /* width: 100%;
+        margin: auto;
+        height: 2000px; */
+    }
+    .icon-navBar {
+        color: white;
+        margin-left: 10px;
+    }
     
     .carousel {
         /* width: 50%; */
@@ -23,8 +37,31 @@
         /* display: box; */
         overflow: hidden
     }
+    .header {
+        background-color: black;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
     
     .tournament {
         grid-column: 2 / 4;
         grid-row: auto;
     }
+    .icon-sm-logo {
+        width: 220px;
+        height: 32px;
+        background: url(https://d33jl3tgfli0fm.cloudfront.net/helix/images/logos/logo-battlefy-white.svg) no-repeat;
+        background-size: contain;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 70px;
+    }
+    .bf-side-bar-header .header-title {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex-grow: 2;
+        flex-grow: 2;
+    }
+   
