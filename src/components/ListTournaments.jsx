@@ -1,15 +1,15 @@
 import React from 'react';
 import Tournament from './Card.jsx'
 var tournaments = require('../resources/data/tournament.json')
-
-
+import '../resources/styles/grid.css'
 
 
 export default function ListTournaments(props) {
 
 
   return (
-    tournaments.map((
+    <div className="tournamentsWrapper">
+    {tournaments.map((
       tournament,index )=>
         <Tournament
           title={tournament.title}
@@ -18,10 +18,11 @@ export default function ListTournaments(props) {
           date={tournament.date}
           img={tournament.img}
           key = {index}
-
         />
 
-    )
+    )}
+    </div>
+
   )
 }
 

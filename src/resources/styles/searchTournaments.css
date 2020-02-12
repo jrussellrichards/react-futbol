@@ -1,0 +1,12 @@
+.SearchTournamentsWrapper {
+    display: grid;
+    grid-gap: 10px;
+    /* grid-template-rows: 10% 20% 10% 10% 50%; */
+    margin-left: 5%;
+    /* width: 100%;
+    margin: auto;
+    height: 2000px; */
+}
+.Search {
+    grid-row: 1;
+}
