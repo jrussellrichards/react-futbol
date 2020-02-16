@@ -11,7 +11,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 
 const App = () => (
-  <div>
+  <div className ="full">
     <Switch>
       <Route
         exact path="/"
@@ -21,7 +21,6 @@ const App = () => (
 
           <div className = "Principal-Section">
               <Carousel />
-              <Tournaments />
           </div>
         </div>
 
