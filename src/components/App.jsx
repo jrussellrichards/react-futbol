@@ -1,40 +1,38 @@
-import React from 'react'
-import Tournament from './Card.jsx'
-import Tournaments from './ListTournaments.jsx'
-import ListSports from './ListSports.jsx'
-import Carousel from './Carousel.jsx'
-import SearchTournamentsPage from './SearchTournamentsPage.jsx'
-import '../resources/styles/grid.css'
-import Header from './Header.jsx'
-import Modal from './Modal.jsx'
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import {
+  Route, Switch,
+} from 'react-router-dom';
+import React from 'react';
+import Carousel from './Carousel';
+import SearchTournamentsPage from './SearchTournamentsPage';
+import '../resources/styles/grid.css';
+import Header from './Header';
 
 
 const App = () => (
-  <div className ="full">
+  <div className="full">
     <Switch>
       <Route
-        exact path="/"
+        exact
+        path="/"
       >
         <div className="principalWrapper">
-            <Header/>
+          <Header />
 
-          <div className = "Principal-Section">
-              <Carousel />
+          <div className="Principal-Section">
+            <Carousel />
           </div>
         </div>
 
       </Route>
       <Route
-        exact path="/tournaments"
+        exact
+        path="/tournaments"
       >
-       <SearchTournamentsPage/>
+        <SearchTournamentsPage />
 
       </Route>
     </Switch>
-  </div >
-)
+  </div>
+);
 
-export default App
-
-
+export default App;
