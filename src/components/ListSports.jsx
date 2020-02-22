@@ -74,21 +74,54 @@ export default function ScrollableTabsButtonForce(props) {
           textColor="primary"
           aria-label="scrollable force tabs example"
         >
-          <Tab label="Basketball 3 vs 3" icon={<i className="fas fa-basketball-ball fa-3x" />} {...a11yProps(0)}
-            onClick={() => handleChangeSports("basket3")}
+          <Tab
+            label="fútbol 5 vs 5"
+            icon={<i className="far fa-futbol fa-3x" />}
+            {...a11yProps(4)}
+            onClick={() => handleChangeSports('futbol5')}
           />
-          <Tab label="Basketball 5 vs 5" icon={<i className="fas fa-basketball-ball fa-3x" />} {...a11yProps(1)}
-          onClick={() => handleChangeSports("basket5")} />
-          <Tab label="Voleyball" icon={<i className="fas fa-volleyball-ball fa-3x" />} {...a11yProps(2)} 
-          onClick={() => handleChangeSports("volley")}/>
-          <Tab label="Rugby" icon={<i className="fas fa-football-ball fa-3x" />} {...a11yProps(3)} 
-          onClick={() => handleChangeSports("rugby")}/>
-          <Tab label="fútbol 5 vs 5" icon={<i className="far fa-futbol fa-3x" />} {...a11yProps(4)} 
-          onClick={() => handleChangeSports("futbol5")}/>
-          <Tab label="fútbol 7 vs 7" icon={<i className="far fa-futbol fa-3x" />} {...a11yProps(6)} 
-          onClick={() => handleChangeSports("futbol7")}/>
-          <Tab label="fútbol 11 vs 11" icon={<i className="far fa-futbol fa-3x" />} {...a11yProps(5)} 
-          onClick={() => handleChangeSports("futbol11")}/>
+          <Tab
+            label="fútbol 7 vs 7"
+            icon={<i className="far fa-futbol fa-3x" />}
+            {...a11yProps(6)}
+            onClick={() => handleChangeSports('futbol7')}
+          />
+          <Tab
+            label="fútbol 11 vs 11"
+            icon={<i className="far fa-futbol fa-3x" />}
+            {...a11yProps(5)}
+            onClick={() => handleChangeSports('futbol11')}
+          />
+          <Tab
+            label="Basketball 3 vs 3"
+            icon={<i className="fas fa-basketball-ball fa-3x" />}
+            {...a11yProps(0)}
+            onClick={() => handleChangeSports('basket3')}
+          />
+          <Tab
+            label="Basketball 5 vs 5"
+            icon={<i className="fas fa-basketball-ball fa-3x" />}
+            {...a11yProps(1)}
+            onClick={() => handleChangeSports('basket5')}
+          />
+          <Tab
+            label="Voleyball"
+            icon={<i className="fas fa-volleyball-ball fa-3x" />}
+            {...a11yProps(2)}
+            onClick={() => handleChangeSports('volley')}
+          />
+          <Tab
+            label="Rugby"
+            icon={<i className="fas fa-football-ball fa-3x" />}
+            {...a11yProps(3)}
+            onClick={() => handleChangeSports('rugby')}
+          />
+          <Tab
+            label="Todo"
+            icon={<i className="fas fa-th fa-3x" />}
+            {...a11yProps(3)}
+            onClick={() => handleChangeSports('all')}
+          />
         </Tabs>
       </AppBar>
 

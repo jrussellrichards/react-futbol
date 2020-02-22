@@ -6,15 +6,16 @@ import '../resources/styles/grid.css';
 import Header from './Header';
 import '../resources/styles/searchTournaments.css';
 
-
+const tournaments = require('../resources/data/tournament.json');
 
 
 export default function SearchTournamentsPage() {
   const [sport, setSport] = useState('all');
   const [date, setDate] = useState('all');
   const handleSportFilter = (inputSport) => {
-    setSport(inputSport)
+    setSport(inputSport);
   };
+
 
   return (
     <div className="principalWrapper">
@@ -27,7 +28,11 @@ export default function SearchTournamentsPage() {
           onChangeSport={handleSportFilter}
         />
         <BottomNavigation />
-        <Tournaments />
+        <Tournaments
+        tournaments = {tournaments.filter(tournament => tournament.sport === sport)}
+
+        />
+
 
 
       </div>
