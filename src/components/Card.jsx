@@ -16,7 +16,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 345,
   },
@@ -50,16 +50,16 @@ export default function Tournament(props) {
   return (
     <Card className={classes.card}>
       <CardHeader
-        avatar={
+        avatar={(
           <Avatar aria-label="recipe" className={classes.avatar}>
             R
           </Avatar>
-        }
-        action={
+        )}
+        action={(
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
-        }
+        )}
         title={props.title}
         subheader={props.date}
       />
@@ -70,7 +70,7 @@ export default function Tournament(props) {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-            {props.description}
+          {props.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -97,7 +97,7 @@ export default function Tournament(props) {
           <Typography paragraph>
             {props.requierements}
           </Typography>
-          
+
         </CardContent>
       </Collapse>
     </Card>

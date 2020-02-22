@@ -6,9 +6,15 @@ import '../resources/styles/grid.css';
 import Header from './Header';
 import '../resources/styles/searchTournaments.css';
 
+
+
+
 export default function SearchTournamentsPage() {
   const [sport, setSport] = useState('all');
   const [date, setDate] = useState('all');
+  const handleSportFilter = (inputSport) => {
+    setSport(inputSport)
+  };
 
   return (
     <div className="principalWrapper">
@@ -17,7 +23,9 @@ export default function SearchTournamentsPage() {
       <div className="SearchTournamentsWrapper">
         <h1>Browse Tournaments</h1>
         <h2>Choose your sport</h2>
-        <ListSports />
+        <ListSports
+          onChangeSport={handleSportFilter}
+        />
         <BottomNavigation />
         <Tournaments />
 
