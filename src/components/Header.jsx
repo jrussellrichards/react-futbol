@@ -98,6 +98,28 @@ export default function Header() {
 
           </Typography>
 
+          {/* login */}
+          <i
+            className="far fa-user fa-2x"
+            style={{
+              color: 'white',
+              'margin-left': '10px',
+            }}
+          />
+          <Typography
+            variant="h6"
+            className={classes.title}
+          >
+
+            <Link
+              to="./Login"
+              style={button}
+            >
+              Login
+            </Link>
+
+          </Typography>
+
 
         </div>
 

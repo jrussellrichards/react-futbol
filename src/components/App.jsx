@@ -6,6 +6,7 @@ import Carousel from './Carousel';
 import SearchTournamentsPage from './SearchTournamentsPage';
 import '../resources/styles/grid.css';
 import Header from './Header';
+import Login from './Login';
 
 
 const App = () => (
@@ -29,6 +30,13 @@ const App = () => (
         path="/tournaments"
       >
         <SearchTournamentsPage />
+
+      </Route>
+      <Route
+        exact
+        path="/login"
+      >
+        <Login />
 
       </Route>
     </Switch>
