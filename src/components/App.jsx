@@ -4,6 +4,7 @@ import {
 import React from 'react';
 import Carousel from './Carousel';
 import SearchTournamentsPage from './SearchTournamentsPage';
+import CreateTournament from './CreateTournament';
 import '../resources/styles/grid.css';
 import Header from './Header';
 import Login from './Login';
@@ -37,6 +38,13 @@ const App = () => (
         path="/login"
       >
         <Login />
+
+      </Route>
+      <Route
+        exact
+        path="/Organize"
+      >
+        <CreateTournament />
 
       </Route>
     </Switch>
