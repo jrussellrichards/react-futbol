@@ -9,7 +9,6 @@ import '../resources/styles/grid.css';
 import Header from './Header';
 import Login from './Login';
 
-
 const App = () => (
   <div className="full">
     <Switch>
