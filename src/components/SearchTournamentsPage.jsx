@@ -20,7 +20,7 @@ export default function SearchTournamentsPage() {
     
     function () {
 
-      axios.get('http://localhost:5000/tournaments/sport/'+sport)
+      axios.get('https://futbol-back.herokuapp.com/tournaments/sport/'+sport)
         .then(function (response) {
           // handle success
           tournaments = response.data
