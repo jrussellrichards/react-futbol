@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './state/reducers/index'
-import App from './components/app.jsx'
+import App from './components/App.jsx'
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "typeface-roboto";
