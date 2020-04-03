@@ -41,7 +41,6 @@ export default function SearchTournamentsPage() {
       <Header />
 
       <div className="SearchTournamentsWrapper">
-        <h1>Browse Tournaments</h1>
         <ListSports
           onChangeSport={handleSportFilter}
         />
