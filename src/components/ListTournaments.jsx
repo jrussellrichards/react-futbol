@@ -14,12 +14,10 @@ useEffect(() => {
    .get("https://futbol-back.herokuapp.com/tournaments/sport/" + sport)
    .then(function(response) {
     // handle success
-    // tournaments = response.data;
-    if (props.sport!= selected_sport){ // This is where I correct the infinite loop
-      selected_sport = props.sport
+
       setTournaments(response.data)
 
-    }
+    
   })
   .catch(function(error) {
     // handle error
@@ -31,7 +29,7 @@ useEffect(() => {
 };
 
  getTournaments(props.sport);
-});
+} ,[props.sport]);
 
   return (
     <div className="tournamentsWrapper">
