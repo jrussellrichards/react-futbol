@@ -8,29 +8,30 @@ var selected_sport = '0'
 export default function ListTournaments(props) {
 const [tournaments,setTournaments] = useState([])
 
-  const getTournaments = sport => {
-    axios
-      .get("https://futbol-back.herokuapp.com/tournaments/sport/" + sport)
-      .then(function(response) {
-        // handle success
-        // tournaments = response.data;
-        if (props.sport!= selected_sport){
-          console.log(selected_sport)
-          selected_sport = props.sport
-          setTournaments(response.data)
+useEffect(() => {
+  const getTournaments = async (sport) => {
+   axios
+   .get("https://futbol-back.herokuapp.com/tournaments/sport/" + sport)
+   .then(function(response) {
+    // handle success
+    // tournaments = response.data;
+    if (props.sport!= selected_sport){ // This is where I correct the infinite loop
+      selected_sport = props.sport
+      setTournaments(response.data)
 
-        }
-      })
-      .catch(function(error) {
-        // handle error
-        console.log(error);
-      })
-      .then(function() {
-        // always executed
-      });
-  };
+    }
+  })
+  .catch(function(error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function() {
+    // always executed
+  });
+};
 
-getTournaments(props.sport)
+ getTournaments(props.sport);
+});
 
   return (
     <div className="tournamentsWrapper">

@@ -8,6 +8,7 @@ import CreateTournament from './CreateTournament';
 import '../resources/styles/grid.css';
 import Header from './Header';
 import Login from './Login';
+import "regenerator-runtime/runtime.js";
 
 const App = () => (
   <div className="full">

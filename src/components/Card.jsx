@@ -19,6 +19,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 345,
+    height : '450px',
   },
   media: {
     height: 0,
@@ -52,7 +53,7 @@ export default function Tournament(props) {
       <CardHeader
         avatar={(
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            5
           </Avatar>
         )}
         action={(
@@ -68,11 +69,6 @@ export default function Tournament(props) {
         image={props.img}
         title="Paella dish"
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {props.description}
-        </Typography>
-      </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
@@ -91,15 +87,12 @@ export default function Tournament(props) {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Detalles:</Typography>
-          <Typography paragraph>
-            {props.requierements}
-          </Typography>
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.requierements}
+            </Typography>
+          </CardContent>
 
-        </CardContent>
-      </Collapse>
     </Card>
   );
 }
