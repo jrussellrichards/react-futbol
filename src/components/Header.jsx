@@ -124,8 +124,6 @@ export default function Header() {
         </div>
 
 
-        <Button color="inherit">Login</Button>
-
 
       </div>
     </div>

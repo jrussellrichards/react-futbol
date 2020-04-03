@@ -4,9 +4,6 @@ import ListSports from './ListSports';
 import BottomNavigation from './BottomNavigation';
 import '../resources/styles/grid.css';
 import Header from './Header';
-const axios = require('axios').default;
-
-var tournaments =[]
 
 
 export default function SearchTournamentsPage() {
@@ -16,25 +13,7 @@ export default function SearchTournamentsPage() {
     setSport(inputSport);
   };
 
-  useEffect(
-    
-    function () {
-
-      axios.get('https://futbol-back.herokuapp.com/tournaments/sport/'+sport)
-        .then(function (response) {
-          // handle success
-          tournaments = response.data
-          console.log(tournaments)
-        })
-        .catch(function (error) {
-          // handle error
-          console.log(error);
-        })
-        .then(function () {
-          // always executed
-        });
-    }
-  )
+  
 
   return (
     <div className="principalWrapper">
@@ -46,7 +25,7 @@ export default function SearchTournamentsPage() {
         />
         <BottomNavigation />
         <Tournaments
-        tournaments = {tournaments}
+        sport = {sport}
 
 
         />
