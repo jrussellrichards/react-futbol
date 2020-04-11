@@ -60,7 +60,7 @@ export default function CreateTournament() {
         requierements
     );
     axios
-      .post("http://localhost:5000/createTournament", {
+      .post("https://futbol-back.herokuapp.com/createTournament", {
         title: title,
         sport: sport,
         description: description,
@@ -182,7 +182,7 @@ export default function CreateTournament() {
             <button
               class="button is-link is-light"
               type="submit"
-              value="Submit"
+              value="Subsmit"
             >
               Cancel
             </button>

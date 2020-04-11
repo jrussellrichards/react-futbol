@@ -1,66 +1,35 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-
-  // mode: 'development',
-  module: {
-    // output: {
-    //     path: path.resolve(__dirname, 'dist'),
-    //     publicPath: '/'
-    //   },
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-react'],
-        },
-      }],
+    mode: 'development',
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
-    {
-      test: /\.scss$/,
-      loader: 'style-loader!css-loader!sass-loader',
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader'
+            }
+        ]
     },
-    {
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/',
-        },
-      }],
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            '@': path.resolve(__dirname, 'src/'),
+        }
     },
-    {
-      test: /\.html$/,
-      use: [{
-        loader: 'html-loader',
-      }],
+    plugins: [new HtmlWebpackPlugin({
+        template: './src/index.html'
+    })],
+    devServer: {
+        historyApiFallback: true
     },
-    {
-      test: /\.css$/,
-      loader: [
-        MiniCSSExtractPlugin.loader,
-        'css-loader',
-      ],
-    },
-
-    ],
-  },
-
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: './public/index.html',
-      filename: './index.html',
-    }),
-    new MiniCSSExtractPlugin(),
-  ],
-  devServer: {
-    historyApiFallback: true,
-  },
-  resolve: {extensions: ['.js', '.jsx']}
-
-};
+    externals: {
+        // global app config object
+        config: JSON.stringify({
+            apiUrl: 'http://localhost:5000'
+        })
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Header from './Header';
+const axios = require("axios").default;
 
 function Copyright() {
   return (
@@ -49,11 +50,51 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignIn() {
   const classes = useStyles();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleChangePassword = event => {
+    const target = event.target;
+    const value = target.value;
+    setPassword(value);
+  };
+  const handleChangeEmail = event => {
+    const target = event.target;
+    const value = target.value;
+    setEmail(value);
+  };
+
+  const handleLogin = event => {
+
+    let config = {
+      headers: {
+        'token': localStorage.getItem('token')
+      }
+    }
+
+    axios
+      .post("http://localhost:5000/login", {
+        email: email,
+        password: password,
+      },config)
+      .then(function(response) {
+        console.log(response.data.succesfull)
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function() {
+        // always executed
+      });
+    event.preventDefault();
+  };
 
   return (
     <div className="principalWrapper">
       <Header />
 
+      
 
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -64,7 +105,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form onSubmit={handleLogin}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -75,6 +116,8 @@ export default function SignIn() {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={handleChangeEmail}
+            value={email}
           />
           <TextField
             variant="outlined"
@@ -86,6 +129,9 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={handleChangePassword}
+            value={password}
+
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -118,6 +164,7 @@ export default function SignIn() {
         <Copyright />
       </Box>
     </Container>
+
     </div>
   );
 }
