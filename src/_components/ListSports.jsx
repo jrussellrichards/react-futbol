@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ScrollableTabsButtonForce(props) {
+export function ListSports(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 

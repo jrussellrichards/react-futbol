@@ -1,1 +1,1 @@
-export * from './SearchTournamentPage';
+export * from './SearchTournamentsPage';

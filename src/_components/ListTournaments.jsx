@@ -5,7 +5,7 @@ const axios = require("axios").default;
 
 var selected_sport = '0'
 
-export default function ListTournaments(props) {
+export function ListTournaments(props) {
 const [tournaments,setTournaments] = useState([])
 
 useEffect(() => {

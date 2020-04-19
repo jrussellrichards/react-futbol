@@ -1,9 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-import '../resources/styles/grid.css';
+import '@/resources/styles/grid.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +23,7 @@ const button = {
   'margin-left': '2em',
 };
 
-export default function Header() {
+export function Header() {
   const classes = useStyles();
 
   return (
