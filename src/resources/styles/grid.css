@@ -4,29 +4,37 @@
         grid-template-columns: 20% 80%;
         height: 1000px;
     }
-    html,body { height: 100%; margin: 0px; padding: 0px; }
-      .full {  height: 100% }
+    
+    html,
+    body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .full {
+        height: 100%
+    }
+    
     .tournamentsWrapper {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr;
         height: 800px;
         overflow: scroll;
-
     }
-
-
-
     
     .navWrapper {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: 10% 90% ;
+        grid-template-columns: 10% 90%;
     }
+    
     .icon-navBar {
         color: white;
         margin-left: 10px;
     }
+    
     .Principal-Section {
         margin-left: 5%;
     }
@@ -38,14 +46,17 @@
         /* display: box; */
         overflow: hidden
     }
+    
     .header {
         background-color: black;
+        height: 1000px;
     }
     
     .tournament {
         grid-column: 2 / 4;
         grid-row: auto;
     }
+    
     .icon-sm-logo {
         width: 220px;
         height: 32px;
@@ -55,6 +66,7 @@
         margin-top: 25px;
         margin-bottom: 70px;
     }
+    
     .bf-side-bar-header .header-title {
         display: -webkit-flex;
         display: flex;
@@ -63,4 +75,3 @@
         -webkit-flex-grow: 2;
         flex-grow: 2;
     }
-   

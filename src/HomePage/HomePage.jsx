@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { userService, authenticationService } from '@/_services';
+import { Header } from '@/_components';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -16,18 +17,9 @@ class HomePage extends React.Component {
     render() {
         const { currentUser, users } = this.state;
         return (
-            <div>
-                <h1>Hi {currentUser.name}!</h1>
-                <p>You're logged in with React & JWT!!</p>
-                <h3>Users from secure api end point:</h3>
-                {users &&
-                    <ul>
-                        {users.map(user =>
-                            <li key={user.id}>{user.firstName} {user.lastName}</li>
-                        )}
-                    </ul>
-                }
-            </div>
+                <Header/>
+                {/* <h1>Hi {currentUser.name}!</h1> */}
+
         );
     }
 }

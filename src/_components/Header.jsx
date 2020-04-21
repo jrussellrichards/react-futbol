@@ -30,7 +30,7 @@ export function Header() {
     <div
       className="header"
     >
-      <div className={classes.root}>
+      <div className="header">
 
         <div className="icon-sm-logo" />
 
@@ -89,7 +89,7 @@ export function Header() {
           >
 
             <Link
-              to="./Organize"
+              to="./CreateTournament"
               style={button}
             >
               Organize Tournaments

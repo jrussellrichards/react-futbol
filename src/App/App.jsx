@@ -1,20 +1,20 @@
 import React from 'react';
 import {
-    Route, Switch,BrowserRouter
+    Route, Switch, BrowserRouter
 } from 'react-router-dom';
 
-import { history } from '@/_helpers';
-import { authenticationService } from '@/_services';
 import { PrivateRoute } from '@/_components';
-import { HomePage } from '@/HomePage';
 import { LoginPage } from '@/LoginPage';
+import { HomePage } from '@/HomePage';
 import { SearchTournamentsPage } from '@/SearchTournamentsPage';
+import {CreateTournament} from '@/CreateTournamentPage/CreateTournament';
+import "regenerator-runtime/runtime.js";
 
-class App extends React.Component {
+export class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="full">
                 <BrowserRouter>
 
                     <Switch>
@@ -22,9 +22,28 @@ class App extends React.Component {
                             exact
                             path="/"
                         >
+                            <div className="principalWrapper">
 
+                                <PrivateRoute exact path="/" component={HomePage} />
+                            </div >
+
+                        </Route>
+
+                        <Route path="/login" component={LoginPage} />
+
+                        <Route
+                            exact
+                            path="/tournaments"
+                        >
                             <SearchTournamentsPage />
                         </Route>
+                        <Route
+                            exact
+                            path="/CreateTournament"
+                        >
+                            <CreateTournament />
+                        </Route>
+
                     </Switch>
                 </BrowserRouter>
 
@@ -33,4 +52,3 @@ class App extends React.Component {
     }
 }
 
-export { App }; 

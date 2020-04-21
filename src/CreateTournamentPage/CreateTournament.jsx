@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 const axios = require("axios").default;
 
-import Header from "./Header";
+import {Header} from "@/_components/Header";
+import config from 'config';
 
-export default function CreateTournament() {
+export function CreateTournament() {
   const [title, setTitle] = useState("");
   const [sport, setSport] = useState("futbol5");
   const [date, setDate] = useState("");
@@ -60,7 +61,7 @@ export default function CreateTournament() {
         requierements
     );
     axios
-      .post("https://futbol-back.herokuapp.com/createTournament", {
+      .post(`${config.apiUrl}/createTournament`, {
         title: title,
         sport: sport,
         description: description,

@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import '@/resources/styles/grid.css';
 // import {Header,ListSports,BottomNavigation,ListTournaments} from '@/_components';
-import {Header} from '@/_components';
+import {Header,ListSports,SimpleBottomNavigation,ListTournaments} from '@/_components';
 
 
 export function SearchTournamentsPage() {
@@ -11,24 +11,22 @@ export function SearchTournamentsPage() {
     setSport(inputSport);
   };
 
-  
-
   return (
     <div className="principalWrapper">
       <Header />
 
-      {/* <div className="SearchTournamentsWrapper">
+      <div className="SearchTournamentsWrapper">
         <ListSports
           onChangeSport={handleSportFilter}
         />
-        <BottomNavigation />
-        <Tournaments
+        <SimpleBottomNavigation />
+        <ListTournaments
         sport = {sport}
 
 
         />
 
-      </div> */}
+      </div> 
     </div>
   );
 }
