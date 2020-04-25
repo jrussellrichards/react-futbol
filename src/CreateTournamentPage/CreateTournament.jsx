@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 const axios = require("axios").default;
-
-import {Header} from "@/_components/Header";
+import { userService, authenticationService } from '@/_services';
+import {Menu} from "@/_components/Menu";
 import config from 'config';
 
 export function CreateTournament() {
   const [title, setTitle] = useState("");
+  const [currentUser, setcurrentUser] = useState(authenticationService.currentUserValue);
   const [sport, setSport] = useState("futbol5");
   const [date, setDate] = useState("");
   const [requierements, setRequierements] = useState("");
   const [description, setDescription] = useState("");
 
-  // const handleChange = (event) => {
+            // const handleChange = (event) => {
   //     const target = event.target;
   //     const value = target.value
   //     const name = target.name
@@ -87,7 +88,9 @@ export function CreateTournament() {
 
   return (
     <div className="principalWrapper">
-      <Header />
+      <Menu 
+                currentUser = {currentUser}/>
+
       <form onSubmit={handleSubmit}>
         <div class="field">
           <label class="label">Title</label>

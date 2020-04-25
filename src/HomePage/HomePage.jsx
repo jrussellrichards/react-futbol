@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { userService, authenticationService } from '@/_services';
-import { Header } from '@/_components';
+import { Menu } from '@/_components';
+                 //<h1>Hi {currentUser.name}!</h1> 
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -15,10 +16,9 @@ class HomePage extends React.Component {
 
 
     render() {
-        const { currentUser, users } = this.state;
         return (
-                <Header/>
-                {/* <h1>Hi {currentUser.name}!</h1> */}
+                <Menu
+                currentUser = {this.state.currentUser}/>
 
         );
     }

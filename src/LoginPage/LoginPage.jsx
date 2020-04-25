@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-
+import { Menu } from '@/_components';
 import { authenticationService } from '@/_services';
 
 class LoginPage extends React.Component {
@@ -16,7 +16,9 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="principalWrapper">
+                <Menu />
+                <div>
                 <div className="alert alert-info">
                     Username: test<br />
                     Password: test
@@ -69,6 +71,7 @@ class LoginPage extends React.Component {
                         </Form>
                     )}
                 />
+                </div>
             </div>
         )
     }
