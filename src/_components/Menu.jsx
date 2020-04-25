@@ -65,7 +65,9 @@ export const Menu = (props) => {
 
   </Typography>;
   } else {
-    compi = <Typography
+    compi = <div>
+      
+  <Typography
     variant="h6"
     className={classes.title}
   >
@@ -77,7 +79,21 @@ export const Menu = (props) => {
       Login
     </Link>
 
-  </Typography>;
+  </Typography>
+  <Typography
+    variant="h6"
+    className={classes.title}
+  >
+  
+    <Link
+      to="./CreateAccount"
+      style={button}
+    >
+      Create Account
+    </Link>
+
+  </Typography>
+  </div>
   }
   return (
     <aside className="menu" className="header">

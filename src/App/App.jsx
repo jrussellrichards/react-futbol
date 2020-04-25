@@ -11,6 +11,7 @@ import { SearchTournamentsPage } from '@/SearchTournamentsPage';
 import {CreateTournament} from '@/CreateTournamentPage/CreateTournament';
 import "regenerator-runtime/runtime.js";
 import 'bulma/css/bulma.css'
+import { CreateAccount } from '@/CreateAccountPage';
 
 export class App extends React.Component {
 
@@ -53,6 +54,12 @@ export class App extends React.Component {
                             path="/Menu"
                         >
                             <Menu />
+                        </Route>
+                        <Route
+                            exact
+                            path="/CreateAccount"
+                        >
+                            <CreateAccount />
                         </Route>
 
                     </Switch>
