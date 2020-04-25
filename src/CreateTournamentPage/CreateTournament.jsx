@@ -69,7 +69,8 @@ export function CreateTournament() {
         date: date,
         requierements: requierements,
         img:
-          "https://elpais.com/deportes/imagenes/2019/12/20/actualidad/1576859348_980228_1576861112_noticia_grande.jpg"
+          "https://img.blogs.es/anexom/wp-content/uploads/2017/04/brazuca-e1492096636886-920x515.jpg"
+          // "https://elpais.com/deportes/imagenes/2019/12/20/actualidad/1576859348_980228_1576861112_noticia_grande.jpg"
       })
       .then(function(response) {
         // handle success

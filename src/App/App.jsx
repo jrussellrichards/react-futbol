@@ -34,7 +34,6 @@ export class App extends React.Component {
                             path="/"
                         >
                             <div className="principalWrapper">
-
                                 <HomePage/>
                             </div >
 
