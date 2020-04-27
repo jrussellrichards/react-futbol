@@ -18,3 +18,4 @@ app.get('/',function(req,res) {
     res.sendFile(__dirname + '/dist/');
   });
 
+// Tengo un problema el vscode me marca todo con error.
