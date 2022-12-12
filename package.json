@@ -49,7 +49,7 @@
         "babel-preset-react": "^6.24.1",
         "bulma": "^0.8.2",
         "bulma-calendar": "^6.0.7",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "file-loader": "^5.0.2",
         "formik": "^2.1.4",
         "nodemon": "^2.0.2",
